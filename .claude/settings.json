@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd /Users/grey300/Downloads/Zora *)",
+      "Bash(node --check scripts/seed-admin.mjs)",
+      "Bash(curl -s -o /dev/null -w \"GET /dashboard  -> HTTP %{http_code}\\\\n\" http://localhost:3001/dashboard)",
+      "Bash(curl -s -o /dev/null -w \"GET /            -> HTTP %{http_code}\\\\n\" http://localhost:3001/)",
+      "Bash(curl -s -o /dev/null -w \"GET /admin/login -> HTTP %{http_code}\\\\n\" http://localhost:3001/admin/login)",
+      "Bash(perl -i -pe 's{/api/history\\\\?userId=\\\\$\\\\{userId\\\\}&limit=100}{/api/history?limit=100}g; s{/api/replay\\\\?userId=\\\\$\\\\{userId\\\\}}{/api/replay}g' app/saved-quizzes/page.jsx)",
+      "Bash(perl -i -pe 's{/api/history\\\\?userId=\\\\$\\\\{user\\\\.id\\\\}&limit=100}{/api/history?limit=100}g' app/quiz-dashboard/RecentActivityCard.jsx)",
+      "Bash(perl -i -pe 's{/api/history\\\\?userId=\\\\$\\\\{userId\\\\}&limit=\\\\$\\\\{limit\\\\}}{/api/history?limit=\\\\$\\\\{limit\\\\}}g' app/quiz-dashboard/_components/HistoryComponent.jsx)",
+      "Bash(perl -i -pe 's{/api/history\\\\?userId=\\\\$\\\\{userId\\\\}}{/api/history}g' app/history/HistoryClient.jsx)",
+      "Bash(perl -i -pe 's{/api/game\\\\?userId=\\\\$\\\\{userId\\\\}}{/api/game}g' app/quiz-dashboard/_components/QuizCreation.jsx)",
+      "Bash(node -e ' *)",
+      "Bash(node --input-type=module -e ' *)",
+      "Bash(perl -i -pe 's{import MCQ from \"\\\\.\\\\./\\\\.\\\\./\\\\.\\\\./_components/MCQ\";}{import QuizPlay from \"../../../_components/QuizPlay\";}; s{return <MCQ game=\\\\{gameData\\\\} />;}{return <QuizPlay game={gameData} />;}' \"app/dashboard/quiz/start-quiz/play/mcq/[gameId]/page.jsx\")",
+      "Bash(perl -i -pe 's{import OpenEnded from \"\\\\@/app/dashboard/quiz/start-quiz/_components/OpenEnded\";}{import QuizPlay from \"../../../_components/QuizPlay\";}; s{return <OpenEnded game=\\\\{gameData\\\\} />;}{return <QuizPlay game={gameData} />;}' \"app/dashboard/quiz/start-quiz/play/open-ended/[gameId]/page.jsx\")",
+      "Bash(perl -i -pe 's{import Mixed from \"\\\\@/app/dashboard/quiz/start-quiz/_components/Mixed\";}{import QuizPlay from \"../../../_components/QuizPlay\";}; s{return <Mixed game=\\\\{gameData\\\\} />;}{return <QuizPlay game={gameData} />;}' \"app/dashboard/quiz/start-quiz/play/mixed/[gameId]/page.jsx\")"
+    ],
+    "additionalDirectories": [
+      "/Users/grey300/Downloads/Zora/app/(auth)/sign-in/[[...sign-in]]"
+    ]
+  }
+}

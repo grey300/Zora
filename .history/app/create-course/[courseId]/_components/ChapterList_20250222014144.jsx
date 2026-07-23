@@ -1,0 +1,29 @@
+import React from "react";
+import { LuClock4 } from "react-icons/lu";
+function ChapterList({ course }) {
+  return (
+    <div className="mt-3">
+      <h2>Chapters</h2>
+      <div className="mt-2">
+        {course?.courseOutput?.Chapters.map((chapter, index) => (
+          <div key={index} className="flex gap-2 items-center">
+            <h2 className="bg-primary h-10 w-10 text-white rounded-full text-center p-2">
+              {index + 1}
+            </h2>
+            <div>
+              <h2 className="font-medium text-lg">{chapter?.ChapterName}</h2>
+              <p>{chapter?.About}</p>
+              <p>
+                {" "}
+                <LuClock4 />
+                {chapter?.Duration}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default ChapterList;

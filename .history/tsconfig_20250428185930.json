@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+      // your options...
+      "skipLibCheck": true,
+      "esModuleInterop": true
+    },
+    "exclude": ["node_modules"]
+  }
+  

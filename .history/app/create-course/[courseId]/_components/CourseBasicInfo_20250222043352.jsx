@@ -1,0 +1,90 @@
+import React, { useState } from "react";
+import Image from "next/image";
+import { BiSolidCategoryAlt } from "react-icons/bi";
+import { Button } from "@/components/ui/button";
+import EditCourseBasicInfo from "./EditCourseBasicInfo";
+
+function CourseBasicInfo({ course, refreshData }) {
+  const [selectedFile, setSelectedFile] = useState();
+  /**
+   * Select file and upload to cloudinary
+   * @param {*} event
+   */
+  const onFileSelected = async (event) => {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    setSelectedFile(URL.createObjectURL(file));
+
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append(
+      "upload_preset",
+      process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET
+    ); // Use Upload Preset
+    formData.append("folder", "course_images"); // Optional: Organize images in Cloudinary
+
+    try {
+      const response = await fetch(
+        `https://api.cloudinary.com/v1_1/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      const data = await response.json();
+      if (response.ok) {
+        console.log("Upload successful:", data.secure_url);
+      } else {
+        console.error("Upload failed", data);
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+
+  return (
+    <div className="p-10 border rounded-xl shadow-sm mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+        <div className="flex flex-col justify-between h-full">
+          <div>
+            <h2 className="font-bold text-2xl">
+              {course?.courseOutput?.CourseName}
+              <EditCourseBasicInfo
+                course={course}
+                refreshData={() => refreshData(true)}
+              />
+            </h2>
+            <h2 className="text-sm text-gray-400 mt-3">
+              {course?.courseOutput?.Description}
+            </h2>
+            <h2 className="font-medium mt-2 flex gap-2 items-center text-primary">
+              <BiSolidCategoryAlt />
+              {course?.category}
+            </h2>
+          </div>
+          <Button className="mt-5 w-full">Start</Button>
+        </div>
+        <div>
+          <label htmlFor="upload-image">
+            <Image
+              src={selectedFile ? selectedFile : "/placeholder.png"}
+              width={300}
+              height={300}
+              className="w-full rounded-xl h-[300px] object-cover cursor-pointer"
+            />
+          </label>
+          <input
+            type="file"
+            id="upload-image"
+            className="opacity-0"
+            onChange={onFileSelected}
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default CourseBasicInfo;

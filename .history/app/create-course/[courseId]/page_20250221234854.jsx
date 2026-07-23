@@ -1,0 +1,20 @@
+"use client";
+import { CourseList } from "@/configs/schema";
+import React, { useEffect } from "react";
+
+function CourseLayout({ params }) {
+  const {user} = useUser();
+  useEffect(() => {
+    console.log(params);
+  }, [params]);
+
+  const GetCourse = async () => {
+    const result = await db.select().from(CourseList)
+    .where(and(eq(CourseList.courseId,params?.courseId), eq(CourseList?.createdBy, 
+      user?.primaryEmailAddress?.emailAddress))
+  };
+
+  return <div>CourseLayout</div>;
+}
+
+export default CourseLayout;

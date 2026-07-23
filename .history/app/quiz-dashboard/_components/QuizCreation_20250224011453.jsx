@@ -1,0 +1,20 @@
+import React from "react";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+
+function QuizCreation() {
+  return (
+    <div className="absolute -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+      <Card>
+        <CardDescription></CardDescription>
+      </Card>
+    </div>
+  );
+}
+
+export default QuizCreation;

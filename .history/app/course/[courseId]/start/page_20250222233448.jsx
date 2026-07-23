@@ -1,0 +1,23 @@
+"use client";
+import { CourseList } from "@/configs/schema";
+import React, { useEffect } from "react";
+import { db } from "@/configs/db";
+import { eq } from "drizzle-orm";
+
+function CourseStart({ params }) {
+  useEffect(() => {
+    GetCourse();
+  }, []);
+
+  //Use to get course info from course id
+  const GetCourse = async () => {
+    const result = await db
+      .select()
+      .from(CourseList)
+      .where(eq(CourseList?.courseId, params?.courseId));
+    console.log(result);
+  };
+  return <div>CourseStart</div>;
+}
+
+export default CourseStart;

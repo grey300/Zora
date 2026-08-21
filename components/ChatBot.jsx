@@ -114,7 +114,7 @@ const ChatBot = () => {
       {/* Launcher */}
       <button
         onClick={() => setIsOpen((o) => !o)}
-        className="fixed bottom-6 left-6 z-40 flex h-13 items-center gap-2 rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-gray-800 dark:bg-indigo-600 dark:hover:bg-indigo-500"
+        className="fixed bottom-6 left-6 z-40 flex h-13 items-center gap-2 rounded-full bg-gray-900 px-4 py-3 text-sm font-semibold text-white shadow-lg ring-1 ring-white/10 transition hover:bg-gray-800 dark:bg-green-600 dark:hover:bg-green-500"
       >
         {isOpen ? <X size={20} /> : <MessageCircle size={20} />}
         {!isOpen && <span className="hidden sm:inline">Ask Zora</span>}
@@ -124,7 +124,7 @@ const ChatBot = () => {
       {isOpen && (
         <div className="fixed bottom-20 left-4 z-40 flex h-[520px] w-[92vw] max-w-md flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-700 dark:bg-[#11151D] sm:left-6">
           {/* Header */}
-          <div className="flex items-center gap-3 border-b border-gray-200 bg-gray-900 px-4 py-3 text-white dark:border-gray-700 dark:bg-indigo-600">
+          <div className="flex items-center gap-3 border-b border-gray-200 bg-gray-900 px-4 py-3 text-white dark:border-gray-700 dark:bg-green-600">
             <div className="flex h-9 w-9 items-center justify-center rounded-full bg-white/15">
               <Sparkles size={17} />
             </div>
@@ -152,7 +152,7 @@ const ChatBot = () => {
                     <button
                       key={s}
                       onClick={() => ask(s)}
-                      className="rounded-full border border-gray-200 px-3 py-1.5 text-xs text-gray-600 transition hover:border-indigo-400 hover:text-indigo-500 dark:border-gray-700 dark:text-gray-400"
+                      className="rounded-full border border-gray-200 px-3 py-1.5 text-xs text-gray-600 transition hover:border-green-400 hover:text-green-500 dark:border-gray-700 dark:text-gray-400"
                     >
                       {s}
                     </button>
@@ -167,8 +167,8 @@ const ChatBot = () => {
                 className={cn(
                   "group relative max-w-[88%] rounded-xl px-3.5 py-2.5 text-sm",
                   m.isBot
-                    ? "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 [&_a]:text-indigo-500 [&_code]:text-[12px] [&_pre]:my-2 [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:bg-gray-950 [&_pre]:p-3"
-                    : "ml-auto bg-indigo-600 text-white"
+                    ? "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 [&_a]:text-green-500 [&_code]:text-[12px] [&_pre]:my-2 [&_pre]:overflow-x-auto [&_pre]:rounded-lg [&_pre]:bg-gray-950 [&_pre]:p-3"
+                    : "ml-auto bg-green-600 text-white"
                 )}
               >
                 <ReactMarkdown
@@ -206,12 +206,12 @@ const ChatBot = () => {
               value={inputValue}
               onChange={(e) => setInputValue(e.target.value)}
               placeholder="Type a message…"
-              className="flex-1 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-sm outline-none focus:border-indigo-500 dark:border-gray-600"
+              className="flex-1 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-sm outline-none focus:border-green-500 dark:border-gray-600"
             />
             <button
               type="submit"
               disabled={isThinking || !inputValue.trim()}
-              className="rounded-lg bg-indigo-600 p-2 text-white transition hover:bg-indigo-500 disabled:opacity-50"
+              className="rounded-lg bg-green-600 p-2 text-white transition hover:bg-green-500 disabled:opacity-50"
             >
               <Send size={16} />
             </button>

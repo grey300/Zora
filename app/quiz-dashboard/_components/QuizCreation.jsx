@@ -139,7 +139,7 @@ function QuizCreation() {
                         className={cn(
                           "rounded-xl border p-4 text-left transition",
                           field.value === value
-                            ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-500/10"
+                            ? "border-green-500 bg-green-50 dark:bg-green-500/10"
                             : "border-gray-200 hover:border-gray-300 dark:border-gray-700 dark:hover:border-gray-600"
                         )}
                       >
@@ -147,7 +147,7 @@ function QuizCreation() {
                           size={20}
                           className={
                             field.value === value
-                              ? "text-indigo-500"
+                              ? "text-green-500"
                               : "text-gray-400"
                           }
                         />

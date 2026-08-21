@@ -93,7 +93,7 @@ function EditChapters({
   return (
     <Dialog>
       <DialogTrigger>
-        <CiEdit className="ml-1 inline cursor-pointer hover:text-indigo-500" />
+        <CiEdit className="ml-1 inline cursor-pointer hover:text-green-500" />
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
@@ -133,7 +133,7 @@ function EditChapters({
                 </p>
               </div>
               {message && (
-                <p className="mt-3 rounded-md bg-indigo-500/10 px-3 py-2 text-sm text-indigo-500">
+                <p className="mt-3 rounded-md bg-green-500/10 px-3 py-2 text-sm text-green-500">
                   {message}
                 </p>
               )}

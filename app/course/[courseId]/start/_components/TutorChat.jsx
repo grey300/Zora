@@ -83,7 +83,7 @@ Ground your answers in this chapter content. If asked something outside the chap
       {/* Toggle button */}
       <button
         onClick={() => setOpen((o) => !o)}
-        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-indigo-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-indigo-500"
+        className="fixed bottom-6 right-6 z-40 flex items-center gap-2 rounded-full bg-green-600 px-4 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-500"
       >
         {open ? <X size={18} /> : <GraduationCap size={18} />}
         {!open && <span className="hidden sm:inline">Chapter Tutor</span>}
@@ -92,11 +92,11 @@ Ground your answers in this chapter content. If asked something outside the chap
       {/* Panel */}
       {open && (
         <div className="fixed bottom-20 right-4 z-40 flex h-[480px] w-[92vw] max-w-sm flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-2xl dark:border-gray-700 dark:bg-[#11151D] sm:right-6">
-          <div className="flex items-center gap-2 border-b border-gray-200 bg-indigo-600 px-4 py-3 text-white dark:border-gray-700">
+          <div className="flex items-center gap-2 border-b border-gray-200 bg-green-600 px-4 py-3 text-white dark:border-gray-700">
             <GraduationCap size={18} />
             <div className="min-w-0 flex-1">
               <p className="text-sm font-semibold">Chapter Tutor</p>
-              <p className="truncate text-xs text-indigo-200">
+              <p className="truncate text-xs text-green-200">
                 {chapter?.ChapterName}
               </p>
             </div>
@@ -119,7 +119,7 @@ Ground your answers in this chapter content. If asked something outside the chap
                 className={cn(
                   "max-w-[85%] rounded-xl px-3 py-2 text-sm",
                   m.role === "user"
-                    ? "ml-auto bg-indigo-600 text-white"
+                    ? "ml-auto bg-green-600 text-white"
                     : "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200 [&_code]:text-xs [&_pre]:overflow-x-auto [&_pre]:rounded-md [&_pre]:bg-gray-950 [&_pre]:p-2 [&_pre]:text-gray-100"
                 )}
               >
@@ -143,12 +143,12 @@ Ground your answers in this chapter content. If asked something outside the chap
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder="Ask about this chapter…"
-              className="flex-1 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-sm outline-none focus:border-indigo-500 dark:border-gray-600"
+              className="flex-1 rounded-lg border border-gray-300 bg-transparent px-3 py-2 text-sm outline-none focus:border-green-500 dark:border-gray-600"
             />
             <button
               type="submit"
               disabled={thinking || !input.trim()}
-              className="rounded-lg bg-indigo-600 p-2 text-white transition hover:bg-indigo-500 disabled:opacity-50"
+              className="rounded-lg bg-green-600 p-2 text-white transition hover:bg-green-500 disabled:opacity-50"
             >
               <Send size={16} />
             </button>

@@ -1,15 +1,10 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/providers/AuthProvider";
 import { ReactQueryProvider } from "@/providers/ReactQueryProvider";
 import Layout from "@/components/common/Layout";
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+import ExperienceLayer from "@/components/common/ExperienceLayer";
 
 export const metadata = {
   title: "Zora",
@@ -19,7 +14,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className="antialiased">
+        <ExperienceLayer />
         <AuthProvider>
           <ReactQueryProvider>
             <Layout>

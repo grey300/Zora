@@ -115,7 +115,7 @@ function CourseBasicInfo({ course, refreshData, edit = true }) {
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 md:text-base">
               {course?.courseOutput?.Description}
             </p>
-            <p className="mt-3 flex items-center gap-2 text-sm font-medium text-indigo-500 dark:text-indigo-400">
+            <p className="mt-3 flex items-center gap-2 text-sm font-medium text-green-500 dark:text-green-400">
               <BiSolidCategoryAlt />
               {course?.category}
             </p>
@@ -135,7 +135,7 @@ function CourseBasicInfo({ course, refreshData, edit = true }) {
               </button>
             )}
             {notice && (
-              <p className="mt-2 text-xs text-indigo-500">{notice}</p>
+              <p className="mt-2 text-xs text-green-500">{notice}</p>
             )}
           </div>
           {!edit && (

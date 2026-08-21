@@ -25,25 +25,25 @@ function CourseCard({ course, refreshData, displayUser = false }) {
   };
 
   return (
-    <div className="group flex h-full flex-col overflow-hidden rounded-2xl border border-gray-200 bg-white transition-all hover:-translate-y-0.5 hover:shadow-lg dark:border-gray-800 dark:bg-[#11151D] dark:hover:border-gray-700">
+    <article className="group flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-black/[0.06] bg-white shadow-[0_2px_6px_rgba(15,23,42,.03)] transition-all duration-500 hover:-translate-y-2 hover:border-emerald-400/25 hover:shadow-[0_28px_70px_rgba(5,150,105,.12)] dark:border-white/[0.07] dark:bg-white/[0.035] dark:hover:border-emerald-400/25 dark:hover:shadow-[0_28px_70px_rgba(0,0,0,.3)]">
       <Link href={`/course/${course?.courseId}`}>
-        <div className="overflow-hidden">
+        <div className="relative overflow-hidden p-2 pb-0">
           <Image
             src={course?.courseBanner || "/placeholder.png"}
             width={600}
             height={400}
-            className="h-[170px] w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+            className="h-[190px] w-full rounded-[1.25rem] object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
             alt={course?.courseOutput?.CourseName || "Course Banner"}
             unoptimized
           />
         </div>
       </Link>
 
-      <div className="flex flex-1 flex-col p-4">
+      <div className="flex flex-1 flex-col p-5">
         <h2 className="flex items-start justify-between gap-2 text-base font-semibold text-gray-900 dark:text-white">
           <Link
             href={`/course/${course?.courseId}`}
-            className="line-clamp-2 min-h-[2.6rem] hover:text-indigo-600 dark:hover:text-indigo-400"
+            className="line-clamp-2 min-h-[2.8rem] text-lg font-bold leading-snug transition hover:text-emerald-600 dark:hover:text-emerald-300"
           >
             {course?.courseOutput?.CourseName}
           </Link>
@@ -67,7 +67,7 @@ function CourseCard({ course, refreshData, displayUser = false }) {
         </p>
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
-          <span className="flex items-center gap-1.5 rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-medium text-indigo-600 dark:bg-indigo-500/15 dark:text-indigo-300">
+          <span className="flex items-center gap-1.5 rounded-full bg-emerald-50 px-3 py-1.5 text-xs font-semibold text-emerald-700 dark:bg-emerald-500/15 dark:text-emerald-300">
             <FaBookOpen />
             {course?.courseOutput?.NoOfChapters} Chapters
           </span>
@@ -102,7 +102,7 @@ function CourseCard({ course, refreshData, displayUser = false }) {
           )}
         </div>
       </div>
-    </div>
+    </article>
   );
 }
 

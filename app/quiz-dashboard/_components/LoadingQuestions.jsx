@@ -38,9 +38,9 @@ const LoadingQuestions = ({ finished }) => {
     <div className="flex min-h-[70vh] flex-col items-center justify-center px-6">
       {/* Pulsing brain orb */}
       <div className="relative flex h-24 w-24 items-center justify-center">
-        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-500/25" />
-        <span className="absolute inline-flex h-[68px] w-[68px] rounded-full bg-indigo-500/20" />
-        <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-indigo-600 text-white">
+        <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/25" />
+        <span className="absolute inline-flex h-[68px] w-[68px] rounded-full bg-green-500/20" />
+        <span className="relative flex h-14 w-14 items-center justify-center rounded-full bg-green-600 text-white">
           <BrainCircuit size={26} className="animate-pulse" />
         </span>
       </div>

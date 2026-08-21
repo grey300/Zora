@@ -10,7 +10,7 @@ function SectionCard({ icon: Icon, title, desc, children }) {
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-6 dark:border-gray-800 dark:bg-[#11151D]">
       <div className="flex items-center gap-2">
-        <Icon size={18} className="text-indigo-500" />
+        <Icon size={18} className="text-green-500" />
         <h2 className="font-semibold">{title}</h2>
       </div>
       {desc && <p className="mt-1 text-sm text-muted-foreground">{desc}</p>}

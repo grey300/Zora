@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import CourseCard from "./CourseCard";
 import EmptyState from "@/components/common/EmptyState";
 import { Button } from "@/components/ui/button";
-import { BookOpen } from "lucide-react";
+import { ArrowRight, BookOpen, Layers3 } from "lucide-react";
 import Link from "next/link";
 
 function UserCourseList() {
@@ -36,20 +36,26 @@ function UserCourseList() {
   };
 
   return (
-    <div className="mt-10 px-4 md:px-6 lg:px-8">
-      <h2 className="font-bold text-xl mb-4">My AI Courses</h2>
+    <section className="mt-12 page-enter [animation-delay:120ms]">
+      <div className="mb-6 flex items-end justify-between gap-4">
+        <div>
+          <span className="eyebrow">Your library</span>
+          <h2 className="mt-2 text-2xl font-black tracking-tight sm:text-3xl">Continue learning</h2>
+        </div>
+        {courseList.length > 0 && <Link href="/dashboard/explore" className="hidden items-center gap-2 text-sm font-semibold text-muted-foreground transition hover:text-emerald-600 sm:flex">Explore courses <ArrowRight size={16}/></Link>}
+      </div>
 
       {loading ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {[1, 2, 3, 4, 5].map((item, index) => (
             <div
               key={index}
-              className="w-full mt-5 bg-slate-200 dark:bg-gray-800 animate-pulse rounded-lg h-[200px]"
+              className="h-[320px] w-full animate-pulse rounded-[1.75rem] bg-slate-200 dark:bg-white/[0.06]"
             ></div>
           ))}
         </div>
       ) : courseList.length > 0 ? (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-5">
+        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4">
           {courseList.map((course, index) => (
             <CourseCard
               course={course}
@@ -70,7 +76,7 @@ function UserCourseList() {
           }
         />
       )}
-    </div>
+    </section>
   );
 }
 

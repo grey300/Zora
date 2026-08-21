@@ -23,7 +23,7 @@ function HistoryCard() {
       <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
         View and replay your past quiz attempts.
       </p>
-      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 dark:text-indigo-400">
+      <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-green-600 dark:text-green-400">
         View history
         <ArrowRight
           size={16}

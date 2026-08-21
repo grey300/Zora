@@ -90,7 +90,7 @@ export default function CourseStart({ params }) {
           className={cn(
             "flex w-full items-start gap-3 rounded-xl px-3 py-3 text-left transition",
             index === chapterIndex
-              ? "bg-indigo-50 dark:bg-indigo-500/15"
+              ? "bg-green-50 dark:bg-green-500/15"
               : "hover:bg-gray-100 dark:hover:bg-gray-800/60"
           )}
         >
@@ -98,7 +98,7 @@ export default function CourseStart({ params }) {
             className={cn(
               "mt-0.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-xs font-bold",
               index === chapterIndex
-                ? "bg-indigo-600 text-white"
+                ? "bg-green-600 text-white"
                 : "bg-gray-200 text-gray-600 dark:bg-gray-800 dark:text-gray-400"
             )}
           >
@@ -109,7 +109,7 @@ export default function CourseStart({ params }) {
               className={cn(
                 "block text-sm font-medium leading-snug",
                 index === chapterIndex
-                  ? "text-indigo-600 dark:text-indigo-300"
+                  ? "text-green-600 dark:text-green-300"
                   : "text-gray-800 dark:text-gray-200"
               )}
             >
@@ -159,7 +159,7 @@ export default function CourseStart({ params }) {
       {chapters.length > 0 && (
         <div className="h-1 w-full bg-gray-200 dark:bg-gray-800">
           <div
-            className="h-full bg-indigo-500 transition-all duration-500"
+            className="h-full bg-green-500 transition-all duration-500"
             style={{
               width: `${((chapterIndex + 1) / chapters.length) * 100}%`,
             }}
@@ -196,7 +196,7 @@ export default function CourseStart({ params }) {
         <main className="min-w-0 flex-1">
           {isLoadingCourse || isLoadingChapter ? (
             <div className="flex min-h-[60vh] items-center justify-center gap-2 text-gray-400">
-              <Loader2 className="h-6 w-6 animate-spin text-indigo-500" />
+              <Loader2 className="h-6 w-6 animate-spin text-green-500" />
               {isLoadingCourse ? "Loading course…" : "Loading chapter…"}
             </div>
           ) : selectedChapter && chapterContent ? (

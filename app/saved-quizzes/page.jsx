@@ -117,7 +117,7 @@ export default function SavedQuizzes() {
                     key={quiz.id}
                     className="flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 dark:border-gray-800 dark:bg-[#11151D]"
                   >
-                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-500 dark:bg-indigo-500/15 dark:text-indigo-300">
+                    <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-500 dark:bg-green-500/15 dark:text-green-300">
                       <Icon size={20} />
                     </span>
                     <div className="min-w-0 flex-1">

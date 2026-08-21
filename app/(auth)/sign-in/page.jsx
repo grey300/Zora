@@ -88,7 +88,7 @@ function SignInForm() {
               required
               value={form.email}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-indigo-500"
+              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-green-500"
               placeholder="you@example.com"
             />
           </div>
@@ -102,14 +102,14 @@ function SignInForm() {
               required
               value={form.password}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-indigo-500"
+              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-green-500"
               placeholder="••••••••"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500 disabled:opacity-60"
+            className="w-full rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-green-500 disabled:opacity-60"
           >
             {loading ? "Signing in..." : "Sign in"}
           </button>
@@ -117,7 +117,7 @@ function SignInForm() {
 
         <p className="mt-6 text-center text-sm text-gray-400">
           Don&apos;t have an account?{" "}
-          <Link href="/sign-up" className="font-semibold text-indigo-400 underline">
+          <Link href="/sign-up" className="font-semibold text-green-400 underline">
             Sign up
           </Link>
         </p>

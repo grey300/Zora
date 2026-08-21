@@ -59,24 +59,24 @@ function SideBar({ collapsed: controlledCollapsed, setCollapsed: controlledSet }
     <div
       className={`fixed z-40 h-full ${
         collapsed ? "w-20" : "w-64"
-      } flex flex-col border-r border-gray-200 bg-white p-4 transition-all duration-300 dark:border-gray-800 dark:bg-[#0B0E14]`}
+      } flex flex-col border-r border-black/[0.06] bg-background/90 p-4 shadow-[8px_0_30px_rgba(15,23,42,.03)] backdrop-blur-xl transition-all duration-300 dark:border-white/[0.06] dark:shadow-[8px_0_30px_rgba(0,0,0,.12)]`}
     >
       {/* Logo + collapse toggle */}
       <div className="mb-6 flex items-center justify-between">
         {!collapsed && (
           <Link href="/dashboard">
             <Image
-              src="/Zora.png"
-              width={100}
-              height={80}
+              src="/zora-logo-dark.svg"
+              width={116}
+              height={40}
               alt="Zora"
               className="ml-2 block dark:hidden"
               priority
             />
             <Image
-              src="/ZoraW.png"
-              width={100}
-              height={80}
+              src="/zora-logo-light.svg"
+              width={116}
+              height={40}
               alt="Zora"
               className="ml-2 hidden dark:block"
               priority
@@ -95,7 +95,7 @@ function SideBar({ collapsed: controlledCollapsed, setCollapsed: controlledSet }
       {/* Create course CTA */}
       <Link
         href="/create-course"
-        className={`mb-6 flex items-center justify-center gap-2 rounded-xl bg-indigo-600 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-indigo-500 ${
+        className={`mb-6 flex items-center justify-center gap-2 rounded-xl bg-gradient-to-br from-emerald-600 to-green-600 py-3 text-sm font-semibold text-white shadow-[0_10px_24px_rgba(5,150,105,.22)] transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_rgba(5,150,105,.3)] ${
           collapsed ? "px-0" : "px-4"
         }`}
       >
@@ -123,7 +123,7 @@ function SideBar({ collapsed: controlledCollapsed, setCollapsed: controlledSet }
                       title={collapsed ? item.name : undefined}
                       className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition ${
                         active
-                          ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/15 dark:text-indigo-300"
+                          ? "bg-emerald-500/10 text-emerald-700 dark:bg-emerald-400/10 dark:text-emerald-300"
                           : "text-gray-600 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800/70 dark:hover:text-white"
                       } ${collapsed ? "justify-center px-0" : ""}`}
                     >
@@ -143,7 +143,7 @@ function SideBar({ collapsed: controlledCollapsed, setCollapsed: controlledSet }
                                 href={child.path}
                                 className={`flex items-center gap-2.5 rounded-lg px-3 py-2 text-[13px] font-medium transition ${
                                   childActive
-                                    ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/15 dark:text-indigo-300"
+                                    ? "bg-green-50 text-green-600 dark:bg-green-500/15 dark:text-green-300"
                                     : "text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-500 dark:hover:bg-gray-800/70 dark:hover:text-white"
                                 }`}
                               >
@@ -168,7 +168,7 @@ function SideBar({ collapsed: controlledCollapsed, setCollapsed: controlledSet }
                                 title={child.name}
                                 className={`flex items-center justify-center rounded-lg py-2 transition ${
                                   childActive
-                                    ? "bg-indigo-50 text-indigo-600 dark:bg-indigo-500/15 dark:text-indigo-300"
+                                    ? "bg-green-50 text-green-600 dark:bg-green-500/15 dark:text-green-300"
                                     : "text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-800/70"
                                 }`}
                               >

@@ -5,7 +5,7 @@ const Footer = () => (
   <footer className="border-t border-white/5">
     <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-6 px-4 py-10 sm:flex-row sm:px-6">
       <div className="flex items-center gap-3">
-        <Image src="/ZoraW.png" width={80} height={32} alt="Zora" />
+        <Image src="/zora-logo-light.svg" width={104} height={32} alt="Zora" />
       </div>
 
       <p className="text-sm text-gray-500">

@@ -17,7 +17,7 @@ export default function AdminShell({ user, children }) {
     <div className="flex min-h-screen bg-gray-950 text-gray-100">
       <aside className="flex w-64 shrink-0 flex-col border-r border-gray-800 bg-gray-900 p-4">
         <div className="mb-8 flex items-center gap-2 px-2">
-          <ShieldCheck className="text-indigo-400" size={22} />
+          <ShieldCheck className="text-green-400" size={22} />
           <span className="text-lg font-bold">Zora Admin</span>
         </div>
 
@@ -31,7 +31,7 @@ export default function AdminShell({ user, children }) {
                 href={href}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition ${
                   active
-                    ? "bg-indigo-600/20 text-indigo-300"
+                    ? "bg-green-600/20 text-green-300"
                     : "text-gray-400 hover:bg-gray-800 hover:text-white"
                 }`}
               >

@@ -18,9 +18,9 @@ function LoadingDialog({ loading, description }) {
             <div className="flex flex-col items-center py-8">
               {/* Pulsing AI orb */}
               <div className="relative flex h-20 w-20 items-center justify-center">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-500/30" />
-                <span className="absolute inline-flex h-14 w-14 rounded-full bg-indigo-500/20" />
-                <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-indigo-600 text-white">
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-green-500/30" />
+                <span className="absolute inline-flex h-14 w-14 rounded-full bg-green-500/20" />
+                <span className="relative flex h-12 w-12 items-center justify-center rounded-full bg-green-600 text-white">
                   <Sparkles size={22} className="animate-pulse" />
                 </span>
               </div>
@@ -34,7 +34,7 @@ function LoadingDialog({ loading, description }) {
 
               {/* Indeterminate progress bar */}
               <div className="mt-5 h-1.5 w-56 overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800">
-                <div className="h-full w-1/3 animate-[loading-slide_1.2s_ease-in-out_infinite] rounded-full bg-indigo-500" />
+                <div className="h-full w-1/3 animate-[loading-slide_1.2s_ease-in-out_infinite] rounded-full bg-green-500" />
               </div>
               <style>{`@keyframes loading-slide { 0% { margin-left: -35%; } 100% { margin-left: 105%; } }`}</style>
             </div>

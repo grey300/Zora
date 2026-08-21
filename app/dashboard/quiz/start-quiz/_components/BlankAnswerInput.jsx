@@ -37,7 +37,7 @@ export default function BlankAnswerInput({ answer, setBlankAnswer }) {
             ) : (
               <input
                 id="user-blank-input"
-                className="w-28 border-b-2 border-gray-400 bg-transparent text-center text-gray-900 focus:border-indigo-500 focus:outline-none dark:border-gray-500 dark:text-white dark:focus:border-indigo-400"
+                className="w-28 border-b-2 border-gray-400 bg-transparent text-center text-gray-900 focus:border-green-500 focus:outline-none dark:border-gray-500 dark:text-white dark:focus:border-green-400"
                 type="text"
               />
             )}

@@ -28,9 +28,9 @@ export default function ChapterQuiz({ quiz }) {
   const allAnswered = quiz.every((_, i) => answers[i] !== undefined);
 
   return (
-    <div className="mt-8 rounded-2xl border border-indigo-200 bg-indigo-50/50 p-6 dark:border-indigo-500/30 dark:bg-indigo-500/5">
+    <div className="mt-8 rounded-2xl border border-green-200 bg-green-50/50 p-6 dark:border-green-500/30 dark:bg-green-500/5">
       <div className="flex items-center gap-2">
-        <BrainCircuit className="text-indigo-500" size={22} />
+        <BrainCircuit className="text-green-500" size={22} />
         <h3 className="text-lg font-bold">Check your understanding</h3>
       </div>
       <p className="mt-1 text-sm text-muted-foreground">
@@ -62,7 +62,7 @@ export default function ChapterQuiz({ quiz }) {
                         "flex items-center gap-2 rounded-lg border px-3 py-2.5 text-left text-sm transition",
                         !submitted &&
                           (isChosen
-                            ? "border-indigo-500 bg-indigo-100 dark:bg-indigo-500/15"
+                            ? "border-green-500 bg-green-100 dark:bg-green-500/15"
                             : "border-gray-200 bg-white hover:border-gray-300 dark:border-gray-700 dark:bg-transparent dark:hover:border-gray-600"),
                         submitted &&
                           isCorrect &&
@@ -100,7 +100,7 @@ export default function ChapterQuiz({ quiz }) {
               Score:{" "}
               <span
                 className={
-                  score === quiz.length ? "text-emerald-500" : "text-indigo-500"
+                  score === quiz.length ? "text-emerald-500" : "text-green-500"
                 }
               >
                 {score}/{quiz.length}

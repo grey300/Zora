@@ -29,7 +29,7 @@ const Header = ({ setShowMobileSidebar }) => {
   }, [isDark]);
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between border-b border-gray-200 bg-white/80 px-6 py-3.5 backdrop-blur dark:border-gray-800 dark:bg-[#0B0E14]/80">
+    <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b border-black/[0.06] bg-background/80 px-4 backdrop-blur-xl sm:px-6 dark:border-white/[0.06]">
       {/* Mobile menu button */}
       <button
         className="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 md:hidden"

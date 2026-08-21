@@ -77,7 +77,7 @@ export default function CourseRating({ course }) {
           </div>
         )}
       </div>
-      {message && <p className="mt-2 text-xs text-indigo-500">{message}</p>}
+      {message && <p className="mt-2 text-xs text-green-500">{message}</p>}
     </div>
   );
 }

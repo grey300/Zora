@@ -92,9 +92,9 @@ function CreateCourse() {
                 <div
                   className={`flex h-11 w-11 items-center justify-center rounded-full border-2 text-lg transition-all duration-300 ${
                     done
-                      ? "border-indigo-500 bg-indigo-500 text-white"
+                      ? "border-green-500 bg-green-500 text-white"
                       : active
-                      ? "border-indigo-500 bg-indigo-50 text-indigo-500 dark:bg-indigo-500/15"
+                      ? "border-green-500 bg-green-50 text-green-500 dark:bg-green-500/15"
                       : "border-gray-300 text-gray-400 dark:border-gray-700"
                   }`}
                 >
@@ -102,7 +102,7 @@ function CreateCourse() {
                 </div>
                 <span
                   className={`mt-2 hidden text-xs font-medium md:block ${
-                    active || done ? "text-indigo-500" : "text-gray-400"
+                    active || done ? "text-green-500" : "text-gray-400"
                   }`}
                 >
                   {step.name}
@@ -112,7 +112,7 @@ function CreateCourse() {
                 <div
                   className={`mx-2 mb-5 h-0.5 w-16 rounded-full transition-all duration-300 md:w-28 ${
                     activeIndex > index
-                      ? "bg-indigo-500"
+                      ? "bg-green-500"
                       : "bg-gray-300 dark:bg-gray-700"
                   }`}
                 />
@@ -160,7 +160,7 @@ function CreateCourse() {
             <Button
               disabled={stepIncomplete() || loading}
               onClick={GenerateCourseLayout}
-              className="bg-indigo-600 hover:bg-indigo-500"
+              className="bg-green-600 hover:bg-green-500"
             >
               <Sparkles className="mr-2 h-4 w-4" />
               Generate Course Layout

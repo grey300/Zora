@@ -164,7 +164,7 @@ export default function QuizPlay({ game }) {
     <div className="mx-auto w-[92vw] max-w-3xl py-10">
       {/* Top bar: topic, timer, score */}
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <span className="rounded-full bg-indigo-500/15 px-3 py-1 text-sm font-medium text-indigo-500 dark:text-indigo-300">
+        <span className="rounded-full bg-green-500/15 px-3 py-1 text-sm font-medium text-green-500 dark:text-green-300">
           {game.topic}
         </span>
         <div className="flex items-center gap-4 text-sm text-muted-foreground">
@@ -185,7 +185,7 @@ export default function QuizPlay({ game }) {
             </span>
           )}
           {avgPct !== null && (
-            <span className="text-indigo-500 dark:text-indigo-300">
+            <span className="text-green-500 dark:text-green-300">
               avg {avgPct}%
             </span>
           )}
@@ -195,7 +195,7 @@ export default function QuizPlay({ game }) {
       {/* Progress bar */}
       <div className="mt-4 h-1.5 w-full overflow-hidden rounded-full bg-gray-200 dark:bg-gray-800">
         <div
-          className="h-full rounded-full bg-indigo-500 transition-all duration-300"
+          className="h-full rounded-full bg-green-500 transition-all duration-300"
           style={{ width: `${progress}%` }}
         />
       </div>
@@ -236,7 +236,7 @@ export default function QuizPlay({ game }) {
                     "flex w-full items-center gap-3 rounded-xl border px-4 py-3.5 text-left text-sm transition",
                     !graded &&
                       (chosen
-                        ? "border-indigo-500 bg-indigo-50 dark:bg-indigo-500/10"
+                        ? "border-green-500 bg-green-50 dark:bg-green-500/10"
                         : "border-gray-200 hover:border-gray-300 hover:bg-gray-50 dark:border-gray-700 dark:hover:border-gray-600 dark:hover:bg-gray-800/50"),
                     graded && !chosen && "border-gray-200 opacity-50 dark:border-gray-700",
                     chosenCorrect &&
@@ -248,7 +248,7 @@ export default function QuizPlay({ game }) {
                     className={cn(
                       "flex h-7 w-7 shrink-0 items-center justify-center rounded-lg border text-xs font-bold",
                       chosen && !graded
-                        ? "border-indigo-500 text-indigo-500"
+                        ? "border-green-500 text-green-500"
                         : "border-gray-300 text-gray-500 dark:border-gray-600"
                     )}
                   >

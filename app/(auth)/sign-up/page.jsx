@@ -83,7 +83,7 @@ export default function SignUpPage() {
               type="text"
               value={form.name}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-indigo-500"
+              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-green-500"
               placeholder="Your name"
             />
           </div>
@@ -97,7 +97,7 @@ export default function SignUpPage() {
               required
               value={form.email}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-indigo-500"
+              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-green-500"
               placeholder="you@example.com"
             />
           </div>
@@ -112,14 +112,14 @@ export default function SignUpPage() {
               minLength={8}
               value={form.password}
               onChange={handleChange}
-              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-indigo-500"
+              className="w-full rounded-lg border border-gray-700 bg-gray-950 px-3 py-2 text-white outline-none focus:border-green-500"
               placeholder="At least 8 characters"
             />
           </div>
           <button
             type="submit"
             disabled={loading}
-            className="w-full rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-500 disabled:opacity-60"
+            className="w-full rounded-lg bg-green-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-green-500 disabled:opacity-60"
           >
             {loading ? "Creating account..." : "Create account"}
           </button>
@@ -127,7 +127,7 @@ export default function SignUpPage() {
 
         <p className="mt-6 text-center text-sm text-gray-400">
           Already have an account?{" "}
-          <Link href="/sign-in" className="font-semibold text-indigo-400 underline">
+          <Link href="/sign-in" className="font-semibold text-green-400 underline">
             Sign in
           </Link>
         </p>

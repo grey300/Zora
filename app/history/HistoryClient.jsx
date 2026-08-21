@@ -70,9 +70,9 @@ export default function HistoryClient({ userId }) {
               <Link
                 key={game.id}
                 href={`/statistics/${game.id}`}
-                className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 transition hover:border-indigo-300 hover:shadow-sm dark:border-gray-800 dark:bg-[#11151D] dark:hover:border-indigo-500/50"
+                className="group flex items-center gap-4 rounded-2xl border border-gray-200 bg-white p-4 transition hover:border-green-300 hover:shadow-sm dark:border-gray-800 dark:bg-[#11151D] dark:hover:border-green-500/50"
               >
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-indigo-50 text-indigo-500 dark:bg-indigo-500/15 dark:text-indigo-300">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-50 text-green-500 dark:bg-green-500/15 dark:text-green-300">
                   <Icon size={20} />
                 </span>
                 <span className="min-w-0 flex-1">
@@ -91,7 +91,7 @@ export default function HistoryClient({ userId }) {
                 </span>
                 <ChevronRight
                   size={18}
-                  className="shrink-0 text-gray-300 transition group-hover:translate-x-0.5 group-hover:text-indigo-400 dark:text-gray-600"
+                  className="shrink-0 text-gray-300 transition group-hover:translate-x-0.5 group-hover:text-green-400 dark:text-gray-600"
                 />
               </Link>
             );

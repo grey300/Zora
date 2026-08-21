@@ -53,7 +53,7 @@ export default async function AdminOverviewPage() {
       <p className="mt-1 text-sm text-gray-400">User management at a glance.</p>
 
       <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        <StatCard icon={UsersIcon} label="Total users" value={stats.total} accent="text-indigo-400" />
+        <StatCard icon={UsersIcon} label="Total users" value={stats.total} accent="text-green-400" />
         <StatCard icon={ShieldCheck} label="Admins" value={stats.admins} accent="text-emerald-400" />
         <StatCard icon={UserPlus} label="Google accounts" value={stats.google} accent="text-sky-400" />
         <StatCard icon={Ban} label="Banned" value={stats.banned} accent="text-red-400" />
@@ -62,7 +62,7 @@ export default async function AdminOverviewPage() {
       <div className="mt-8 rounded-2xl border border-gray-800 bg-gray-900">
         <div className="flex items-center justify-between border-b border-gray-800 px-5 py-4">
           <h2 className="font-semibold text-white">Recent signups</h2>
-          <Link href="/admin/users" className="text-sm text-indigo-400 hover:underline">
+          <Link href="/admin/users" className="text-sm text-green-400 hover:underline">
             View all users →
           </Link>
         </div>

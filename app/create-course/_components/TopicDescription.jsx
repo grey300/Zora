@@ -19,7 +19,7 @@ function TopicDescription() {
       {/* Topic */}
       <div>
         <label className="mb-1.5 flex items-center gap-2 text-sm font-medium">
-          <RiFileTextLine className="text-lg text-indigo-500" />
+          <RiFileTextLine className="text-lg text-green-500" />
           Course topic
         </label>
         <Input
@@ -32,7 +32,7 @@ function TopicDescription() {
       {/* Description / what to include */}
       <div>
         <label className="mb-1.5 flex items-center gap-2 text-sm font-medium">
-          <RiArticleLine className="text-lg text-indigo-500" />
+          <RiArticleLine className="text-lg text-green-500" />
           What should the course cover?{" "}
           <span className="font-normal text-muted-foreground">(optional)</span>
         </label>
@@ -47,7 +47,7 @@ function TopicDescription() {
       {/* Audience */}
       <div>
         <label className="mb-1.5 flex items-center gap-2 text-sm font-medium">
-          <RiUserLine className="text-lg text-indigo-500" />
+          <RiUserLine className="text-lg text-green-500" />
           Who is this course for?{" "}
           <span className="font-normal text-muted-foreground">(optional)</span>
         </label>

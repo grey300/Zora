@@ -46,7 +46,7 @@ function ChapterContent({ chapter, content }) {
         {sections.map((section, index) => (
           <section key={index}>
             <div className="flex items-baseline gap-3">
-              <span className="text-sm font-bold text-indigo-500">
+              <span className="text-sm font-bold text-green-500">
                 {String(index + 1).padStart(2, "0")}
               </span>
               <h3 className="text-xl font-semibold">{section.title}</h3>

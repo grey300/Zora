@@ -41,31 +41,33 @@ const featuresList = [
 ];
 
 const Features = () => (
-  <section id="features" className="relative py-20">
-    <div className="mx-auto max-w-6xl px-4 sm:px-6">
+  <section id="features" className="relative overflow-hidden bg-[#05070d] py-24">
+    <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold text-white sm:text-4xl">
-          Everything you need to learn faster
+        <span className="text-xs font-bold uppercase tracking-[.2em] text-emerald-300">One intelligent workspace</span>
+        <h2 className="mt-4 text-2xl font-black tracking-[-.035em] text-white sm:text-4xl">
+          Learn at the speed of thought.
         </h2>
-        <p className="mt-3 text-gray-400">
+        <p className="mt-3 text-sm text-gray-400">
           Zora combines AI course creation, quizzing, and progress tracking in
           one place.
         </p>
       </div>
 
-      <ul className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <ul className="mt-16 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {featuresList.map((item) => {
           const Icon = item.icon;
           return (
             <li
               key={item.title}
-              className="rounded-2xl border border-white/10 bg-white/[0.03] p-6 transition hover:border-indigo-500/40 hover:bg-white/[0.05]"
+              className="group relative min-h-56 overflow-hidden rounded-[1.75rem] border border-white/[0.07] bg-gradient-to-br from-white/[0.055] to-white/[0.015] p-6 transition duration-500 hover:-translate-y-2 hover:border-emerald-400/25 hover:shadow-[0_30px_80px_rgba(5,150,105,.12)]"
             >
-              <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-indigo-500/15 text-indigo-400">
+              <div className="absolute -right-12 -top-12 h-36 w-36 rounded-full bg-emerald-500/0 blur-3xl transition group-hover:bg-emerald-500/20" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-300/15 bg-emerald-500/15 text-emerald-300 transition group-hover:scale-110 group-hover:bg-emerald-500/25">
                 <Icon size={22} />
               </div>
-              <h3 className="mt-4 font-semibold text-white">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-gray-400">
+              <h3 className="mt-8 text-base font-bold text-white">{item.title}</h3>
+              <p className="mt-3 text-[13px] leading-6 text-gray-400">
                 {item.desc}
               </p>
             </li>

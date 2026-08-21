@@ -9,7 +9,7 @@ function DashboardLayout({ children }) {
   const [showMobileSidebar, setShowMobileSidebar] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50 dark:bg-[#0B0E14]">
+    <div className="flex min-h-screen bg-background">
       {/* Desktop sidebar */}
       <div suppressHydrationWarning className="hidden md:block">
         <SideBar collapsed={collapsed} setCollapsed={setCollapsed} />
@@ -34,7 +34,7 @@ function DashboardLayout({ children }) {
         }`}
       >
         <Header setShowMobileSidebar={setShowMobileSidebar} />
-        <main className="flex-1 p-6 md:p-8">{children}</main>
+        <main className="mx-auto w-full max-w-[1600px] flex-1 p-4 sm:p-6 md:p-8">{children}</main>
       </div>
 
       <ChatBot />

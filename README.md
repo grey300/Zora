@@ -98,6 +98,14 @@ npm run dev
 
 The app is available at [http://localhost:3000](http://localhost:3000). Learners sign in at `/sign-in`; the admin portal is at `/admin/login`.
 
+### Key Routes
+
+- `/dashboard` — personal course library
+- `/dashboard/explore` — published community courses
+- `/dashboard/quiz` — quiz creation and activity
+- `/create-course` — guided AI course builder
+- `/admin` — administrator dashboard
+
 ## Available Scripts
 
 | Command | Description |

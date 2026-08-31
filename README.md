@@ -148,6 +148,7 @@ scripts/                # Operational scripts (admin seeding)
 - All database access is mediated through authenticated, ownership-checked API routes — there is no direct client-side database access.
 - Secrets (database credentials, API keys) are server-only environment variables and are never bundled into client code.
 - Admin authentication is fully separated from learner authentication at both the UI and middleware level.
+- Keep `.env` local and rotate any credential that is accidentally committed or shared.
 
 ## License
 

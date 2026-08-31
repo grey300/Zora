@@ -9,7 +9,7 @@ const Footer = () => (
       </div>
 
       <p className="text-sm text-gray-500">
-        © {new Date().getFullYear()} Zora AI. All rights reserved.
+        © {new Date().getFullYear()} Zora. Learn with intention.
       </p>
 
       <div className="flex items-center gap-6 text-sm text-gray-400">

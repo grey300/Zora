@@ -41,11 +41,11 @@ const featuresList = [
 ];
 
 const Features = () => (
-  <section id="features" className="relative overflow-hidden bg-[#05070d] py-24">
+  <section id="features" aria-labelledby="features-title" className="relative overflow-hidden bg-[#05070d] py-24">
     <div className="mx-auto max-w-7xl px-4 sm:px-6">
       <div className="mx-auto max-w-2xl text-center">
         <span className="text-xs font-bold uppercase tracking-[.2em] text-emerald-300">One intelligent workspace</span>
-        <h2 className="mt-4 text-2xl font-black tracking-[-.035em] text-white sm:text-4xl">
+        <h2 id="features-title" className="mt-4 text-2xl font-black tracking-[-.035em] text-white sm:text-4xl">
           Learn at the speed of thought.
         </h2>
         <p className="mt-3 text-sm text-gray-400">

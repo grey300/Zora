@@ -2,7 +2,7 @@ import Link from "next/link";
 import { ArrowRight, BookOpenCheck, BrainCircuit, Play, Sparkles } from "lucide-react";
 
 const Hero = () => (
-  <section className="relative min-h-[820px] overflow-hidden bg-[#05070d]">
+  <section aria-labelledby="hero-title" className="relative min-h-[820px] overflow-hidden bg-[#05070d]">
     {/* Glow */}
     <div
       aria-hidden="true"
@@ -17,7 +17,7 @@ const Hero = () => (
         AI-powered learning platform
       </span>
 
-      <h1 className="mx-auto mt-7 max-w-3xl text-3xl font-black leading-[1.04] tracking-[-.04em] text-white sm:text-5xl lg:text-[4.35rem]">
+      <h1 id="hero-title" className="mx-auto mt-7 max-w-3xl text-3xl font-black leading-[1.04] tracking-[-.04em] text-white sm:text-5xl lg:text-[4.35rem]">
         Turn curiosity into{" "}
         <span className="bg-gradient-to-r from-emerald-300 via-orange-300 to-cyan-300 bg-clip-text text-transparent">
           real knowledge.

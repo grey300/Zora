@@ -12,14 +12,14 @@ const Footer = () => (
         © {new Date().getFullYear()} Zora. Learn with intention.
       </p>
 
-      <div className="flex items-center gap-6 text-sm text-gray-400">
+      <nav aria-label="Footer navigation" className="flex items-center gap-6 text-sm text-gray-400">
         <Link href="/sign-in" className="transition hover:text-white">
           Sign in
         </Link>
         <Link href="/sign-up" className="transition hover:text-white">
           Get started
         </Link>
-      </div>
+      </nav>
     </div>
   </footer>
 );

@@ -34,6 +34,7 @@ const Header = ({ setShowMobileSidebar }) => {
       <button
         className="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-800 md:hidden"
         onClick={() => setShowMobileSidebar?.(true)}
+        aria-label="Open dashboard navigation"
       >
         <Menu size={22} />
       </button>
@@ -44,6 +45,7 @@ const Header = ({ setShowMobileSidebar }) => {
           onClick={() => setIsDark((prev) => !prev)}
           className="rounded-lg p-2 text-gray-500 transition hover:bg-gray-100 hover:text-gray-900 dark:text-gray-400 dark:hover:bg-gray-800 dark:hover:text-white"
           title="Toggle theme"
+          aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
         >
           {isDark ? <Sun size={19} /> : <Moon size={19} />}
         </button>

@@ -118,6 +118,12 @@ The app is available at [http://localhost:3000](http://localhost:3000). Learners
 | `npm run db:studio` | Open Drizzle Studio to inspect the database. |
 | `npm run seed:admin` | Create or update the admin account from `.env`. |
 
+## Troubleshooting
+
+- Confirm `.env` contains `DB_CONNECTION_STRING`, `AUTH_SECRET`, and `GROQ_API_KEY` before starting the app.
+- Run `npm run db:push` after changing the Drizzle schema.
+- If Google sign-in fails locally, verify that the OAuth redirect URI uses port `3000`.
+
 ## Project Structure
 
 ```

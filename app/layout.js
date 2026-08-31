@@ -9,6 +9,8 @@ import ExperienceLayer from "@/components/common/ExperienceLayer";
 export const metadata = {
   title: "Zora",
   description: "AI-powered courses and quizzes",
+  applicationName: "Zora",
+  keywords: ["AI learning", "courses", "quizzes", "education"],
 };
 
 export default function RootLayout({ children }) {
